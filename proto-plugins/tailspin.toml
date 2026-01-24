@@ -1,0 +1,26 @@
+name = "tailspin"
+type = "cli"
+
+[resolve]
+versions = ["5.5.0"]
+# https://github.com/bensadeh/tailspin/releases
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install]
+download-url = "https://github.com/bensadeh/tailspin/releases/download/{download_file}"
+
+[platform.linux]
+download-file = "{version}/tailspin-{arch}-unknown-linux-musl.tar.gz"
+
+[platform.macos]
+download-file = "{version}/tailspin-{arch}-apple-darwin.tar.gz"
+
+[install.exes]
+[install.exes.tailspin]
+exe-path = "tspin"
+primary = true
+[install.exes.tspin]
+exe-path = "tspin"

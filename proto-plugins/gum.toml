@@ -1,0 +1,26 @@
+# original: https://raw.githubusercontent.com/Phault/proto-toml-plugins/main/gum/plugin.toml
+name = "gum"
+type = "cli"
+
+[resolve]
+versions = ["0.17.0"]
+# https://github.com/charmbracelet/gum/releases
+
+[install]
+download-url = "https://github.com/charmbracelet/gum/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/charmbracelet/gum/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i386"
+arm = "armv6"
+aarch64 = "arm64"
+
+[platform.linux]
+archive-prefix = "gum_{version}_Linux_{arch}"
+download-file = "gum_{version}_Linux_{arch}.tar.gz"
+checksum-file = "checksums.txt"
+
+[platform.macos]
+archive-prefix = "gum_{version}_Darwin_{arch}"
+download-file = "gum_{version}_Darwin_{arch}.tar.gz"
+checksum-file = "checksums.txt"

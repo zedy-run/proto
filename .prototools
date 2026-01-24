@@ -1,23 +1,28 @@
-node = "24.5.0"
-
+# https://github.com/zedy-run/proto/blob/registry/.prototools
+[plugins.tools]
+jq = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/jq.toml"
+yq = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/yq.toml"
+uv = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/uv.toml"
+task = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/task.toml"
+gum = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/gum.toml"
+atlas = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/atlas.toml"
+caddy = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/caddy.toml"
+nginx = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/nginx.toml"
+njs = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/njs.toml"
+lego = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/lego.toml"
+openobserve = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/openobserve.toml"
+litestream = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/litestream.toml"
+neon-proxy = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/neon-proxy.toml"
+workerd = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/workerd.toml"
+traefik = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/traefik.toml"
+process-compose = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/process-compose.toml"
+oha = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/oha.toml"
+drizzle-studio = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/drizzle-studio.toml"
+beszel-agent = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/beszel-agent.toml"
+beszel = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/beszel.toml"
+tailspin = "https://raw.githubusercontent.com/zedy-run/proto/refs/heads/registry/proto-plugins/tailspin.toml"
+# foo = "file://dev/zedy-run/proto/proto-plugins/foo.toml"
 [settings]
-unstable-lockfile = true
-
-# [plugins.backends]
-# asdf = "file://../moonrepo/plugins/target/wasm32-wasip1/release/asdf_backend.wasm"
-
-# [plugins.tools]
-# deno-test = "file://../moonrepo/plugins/target/wasm32-wasip1/release/deno_tool.wasm"
-# go-test = "file://../moonrepo/plugins/target/wasm32-wasip1/release/go_tool.wasm"
-# node-test = "file://../moonrepo/plugins/target/wasm32-wasip1/release/node_tool.wasm"
-# moon-test = "file://../moonrepo/plugins/target/wasm32-wasip1/release/moon_tool.wasm"
-# python-test = "file://../moonrepo/plugins/target/wasm32-wasip1/release/python_tool.wasm"
-# ruby-test = "file://../moonrepo/plugins/target/wasm32-wasip1/release/ruby_tool.wasm"
-# api-usage = "file://./plugins/target/wasm32-wasip1/release/proto_api_usage.wasm"
-
-# [tools.api-usage]
-# number = 123
-# string = "foo"
-# boolean = true
-# list = ["a", "b", "c"]
-# map = { "a" = 123 }
+telemetry = false
+auto-clean = true
+detect-strategy = "only-prototools"
